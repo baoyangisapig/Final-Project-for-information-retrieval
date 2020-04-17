@@ -72,7 +72,7 @@ public class JointSearch {
     if (k1==-1)
     k1=gaussianFunction(query.replaceAll("[^a-zA-Z]"," ").split("\\s+").length);
     double k2=(1-k1)*0.6;
-    double k3=(1-k2)*0.4;
+    double k3=(1-k1)*0.4;
     return k1*calScore(query,recordId)+k2*scoreOfDocument(weight2,recordId,wordFreqForSummary,summary)+k3*scoreOfDocument(weight1,recordId,wordFreqForComment,comment);
   }
 
